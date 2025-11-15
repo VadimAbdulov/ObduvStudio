@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="instrumentsButton" type="id">instrumentsButton</item>
+    <item name="mixerButton" type="id">mixerButton</item>
+    <item name="effectsButton" type="id">effectsButton</item>
+    <item name="patternsButton" type="id">patternsButton</item>
+</resources>
