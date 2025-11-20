@@ -2,177 +2,114 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF121212"
+    android:background="#0F0F0F"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FF1E1E1E"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:layout_height="80dp"
+        android:background="#1A1A1A"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:elevation="8dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageButton
-                android:id="@+id/menuButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:src="@android:drawable/ic_menu_more" />
-
-            <TextView
-                android:id="@+id/projectName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Новый проект"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <ImageButton
-                android:id="@+id/settingsButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:src="@android:drawable/ic_menu_preferences" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingTop="12dp">
-
-            <ImageButton
-                android:id="@+id/rewindButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:src="@android:drawable/ic_media_previous" />
-
-            <ImageButton
-                android:id="@+id/playButton"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:padding="8dp"
-                android:src="@android:drawable/ic_media_play"
-                android:layout_marginHorizontal="16dp" />
-
-            <ImageButton
-                android:id="@+id/stopButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:src="@android:drawable/ic_media_pause" />
-
-            <TextView
-                android:id="@+id/currentTime"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0:00"
-                android:textColor="#AAAAAA"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/bpmValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="120 BPM"
-                android:textColor="#AAAAAA"
-                android:textSize="14sp"
-                android:layout_marginEnd="16dp" />
-
-        </LinearLayout>
+            android:textColor="#FFFF5722"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.03" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/projectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@color/black"
+        android:padding="15dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tracksRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#FF252525"
+        android:background="#1A1A1A"
         android:padding="8dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF1E1E1E"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:background="#1A1A1A"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:elevation="12dp">
 
         <Button
-            android:id="@+id/patternsButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Паттерны"
+            android:id="@+id/recordButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/button_primary"
+            android:text="НАЧАТЬ ЗАПИСЬ"
             android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:background="#FF333333" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.02"
+            android:elevation="8dp"
+            android:stateListAnimator="@null" />
 
-        <Button
-            android:id="@+id/mixerButton"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Микшер"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:background="#FF333333" />
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
 
-        <Button
-            android:id="@+id/instrumentsButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Инструменты"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:background="#FF333333" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_secondary"
+                android:text="Треки"
+                android:textColor="#FFFFB74D"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginEnd="8dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null" />
 
-        <Button
-            android:id="@+id/effectsButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Эффекты"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:background="#FF333333" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_secondary"
+                android:text="Микшер"
+                android:textColor="#FFFFB74D"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginHorizontal="4dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_secondary"
+                android:text="Эффекты"
+                android:textColor="#FFFFB74D"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="8dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/recordButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFF44336"
-        android:text="ЗАПИСЬ"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_margin="16dp" />
-
-    <Button
-        android:id="@+id/addTrackButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FF4CAF50"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:layout_margin="16dp" />
 
 </LinearLayout>
